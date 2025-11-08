@@ -1,0 +1,108 @@
+/* General page */
+:root{
+  --max-width: 900px;
+  --muted:#666;
+  --accent:#c33;
+  --card-bg:#f7f7f7;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background:#fff;
+  color:#111;
+  margin:20px;
+  line-height:1.4;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:10px;
+  border:2px solid #000;
+}
+
+/* header */
+.required-note{font-size:13px; color:var(--muted); margin:6px 0}
+.breadcrumb{font-size:13px; color:var(--muted); margin-bottom:10px}
+
+/* Fieldset card */
+.card{
+  border:1px solid #ccc;
+  background:var(--card-bg);
+  padding:12px 14px;
+  margin-bottom:12px;
+}
+.legend-title{font-weight:bold; color:var(--accent); font-size:16px; margin-bottom:8px; display:block}
+
+/* rows */
+.row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin:8px 0;
+  flex-wrap:wrap;
+}
+.row.two-cols label{min-width:120px; width:150px}
+.row label{min-width:120px; width:200px; font-weight:600}
+.row.small label{width:120px; font-weight:600}
+.row input[type="text"],
+.row input[type="email"],
+.row input[type="tel"],
+.row input[type="number"],
+.row select,
+.row textarea{
+  flex:1;
+  padding:6px 8px;
+  border:1px solid #999;
+  border-radius:3px;
+  font-size:14px;
+}
+
+/* radio and checkbox groups */
+.radio-group label,
+.inline-controls label,
+.checkbox-inline{
+  margin-right:12px;
+  font-weight:normal;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* small helper */
+.req{color:var(--accent); margin-left:4px}
+
+/* recurring fields hidden by default */
+.hidden{display:none}
+
+/* contact methods align */
+.contact-list{display:flex; gap:12px; flex-wrap:wrap}
+
+/* buttons */
+.form-actions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  margin-top:6px;
+}
+button{
+  padding:8px 14px;
+  border-radius:4px;
+  border:1px solid #666;
+  background:#eee;
+  cursor:pointer;
+  font-weight:600;
+}
+button:hover{filter:brightness(.98)}
+
+/* notes */
+.secure-note{font-size:13px; color:var(--muted); margin-top:10px}
+.support-note{font-size:13px; color:var(--muted)}
+
+/* Responsive */
+@media (max-width:800px){
+  .container{padding:8px}
+  .row{flex-direction:column; align-items:flex-start}
+  .row label{width:100%}
+  .row.two-cols label{width:100%}
+  .form-actions{justify-content:space-between}
+}
